@@ -1,14 +1,15 @@
 import "./local.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../../utils/api";
 
-export default function ConsultaMaterias() {
+export default function ConsultaPostagens() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     // let url = "/cidades?cid_nome_like=TU";
 
-    let url = "/materias";
+    let url = "/postagens";
     const fetchData = async () => {
       const response = await api(url);
       const data = await response.json();
@@ -21,19 +22,19 @@ export default function ConsultaMaterias() {
   return (
     <div>
       <table align="center" className="tabela">
-        <caption>Consulta de Materias</caption>
+        <caption>Consulta de Postagens</caption>
         <thead>
           <th>Id</th>
-          <th>Materias</th>
-          <th>Cor</th>
+          <th>Texto</th>
+          <th>Curtidas</th>
           <th>Comandos</th>
         </thead>
         {data.map((element, index) => {
           return (
             <tr>
               <td data-cell="id">{element.id}</td>
-              <td data-cell="materia">{element.mat_nome}</td>
-              <td data-cell="cor">{element.mat_cor}</td>
+              <td data-cell="texto">{element.pos_texto}</td>
+              <td data-cell="curtidas">{element.pos_curtidas}</td>
               <td data-cell="">
                 <button>Alterar</button>
                 <button>Excluir</button>
@@ -42,6 +43,7 @@ export default function ConsultaMaterias() {
           );
         })}
       </table>
+      <Link to="/"> Voltar </Link>
     </div>
   );
 }

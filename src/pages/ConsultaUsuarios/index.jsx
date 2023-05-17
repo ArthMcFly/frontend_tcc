@@ -1,5 +1,6 @@
 import "./local.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../../utils/api";
 
 export default function ConsultaCidades() {
@@ -42,6 +43,7 @@ export default function ConsultaCidades() {
           );
         })}
       </table>
+      <Link to="/"> Voltar </Link>
     </div>
   );
 }
