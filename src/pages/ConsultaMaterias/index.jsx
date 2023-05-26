@@ -1,8 +1,6 @@
 import "./local.css";
 import { useState, useEffect } from "react";
 import { api } from "../../utils/api";
-// import DetalhesCidades from "../../components/DetalhesCidades/index";
-
 import Tr from "../../components/Tr/index";
 
 export default function ConsultaMaterias() {
@@ -13,7 +11,6 @@ export default function ConsultaMaterias() {
   const [xTotalCount, setXTotalCount] = useState(-1);
   const [pages, setPages] = useState(-1);
   useEffect(() => {
-    // let url = "/cidades?cid_nome_like=TU";
     let url = `/materias?_page=${page}&_limit=${limit}`;
 
     const fetchData = async () => {
@@ -24,8 +21,7 @@ export default function ConsultaMaterias() {
       setXTotalCount(xtotal);
       const data = await response.json();
       setData(data);
-    };
-
+	};
     fetchData();
   }, [limit, page]);
 
@@ -48,12 +44,11 @@ export default function ConsultaMaterias() {
               <td data-cell="">
                 <button>Alterar</button>
                 <button>Excluir</button>
-                {/* <DetalhesCidades data={element} /> */}
               </td>
             </Tr>
           );
         })}
-      </table>
+	  </table>
       <div>
         <div>
           <span>Itens</span>
@@ -81,8 +76,8 @@ export default function ConsultaMaterias() {
               return <option value={`${element}`}> {element} </option>;
             })}
           </select>
-        </div>
-      </div>
-    </div>
+		</div>
+	  </div>
+	</div>
   );
 }

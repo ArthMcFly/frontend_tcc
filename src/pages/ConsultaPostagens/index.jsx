@@ -43,7 +43,7 @@ export default function ConsultaPostagens() {
           );
         })}
       </table>
-      <Link to="/"> Voltar </Link>
+      <link to="/"> voltar </link>
     </div>
   );
 }
