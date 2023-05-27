@@ -1,5 +1,5 @@
 import "./local.css";
-export default function DetalhesCidades({ data, setShow, ...rest }) {
+export default function DetalhesMaterias({ data, setShow, ...rest }) {
   return (
     <section className="sectionModal">
       <div className="dataShow">
@@ -7,7 +7,7 @@ export default function DetalhesCidades({ data, setShow, ...rest }) {
           <span>Mensagem</span>
           <button onClick={() => setShow()}>X</button>
         </header>
-        <main>Detalhes Cidades - {data.id}</main>
+        <main>Detalhes Matérias - {data.id}</main>
         <footer>Alguma Coisa</footer>
       </div>
     </section>

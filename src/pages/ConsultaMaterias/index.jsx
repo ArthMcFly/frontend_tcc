@@ -1,4 +1,5 @@
 import "./local.css";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { api } from "../../utils/api";
 import Tr from "../../components/Tr/index";
@@ -21,7 +22,7 @@ export default function ConsultaMaterias() {
       setXTotalCount(xtotal);
       const data = await response.json();
       setData(data);
-	};
+    };
     fetchData();
   }, [limit, page]);
 
@@ -39,8 +40,8 @@ export default function ConsultaMaterias() {
           return (
             <Tr data={element}>
               <td data-cell="id">{element.id}</td>
-              <td data-cell="Matéria">{element.mat_nome}</td>
-              <td data-cell="Cor">{element.mat_cor}</td>
+              <td data-cell="materia">{element.mat_nome}</td>
+              <td data-cell="cor">{element.mat_cor}</td>
               <td data-cell="">
                 <button>Alterar</button>
                 <button>Excluir</button>
@@ -48,7 +49,7 @@ export default function ConsultaMaterias() {
             </Tr>
           );
         })}
-	  </table>
+      </table>
       <div>
         <div>
           <span>Itens</span>
@@ -76,8 +77,9 @@ export default function ConsultaMaterias() {
               return <option value={`${element}`}> {element} </option>;
             })}
           </select>
-		</div>
-	  </div>
-	</div>
+        </div>
+        <Link to="/">Voltar</Link>
+      </div>
+    </div>
   );
 }
