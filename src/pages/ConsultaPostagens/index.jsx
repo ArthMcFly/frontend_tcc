@@ -50,7 +50,7 @@ export default function ConsultaPostagens() {
 							<td data-cell="curtidas">{element.pos_curtidas}</td>
 							<td data-cell="resposta">{element.pos_respostaid}</td>
 							<td data-cell="textoresposta">{element.pos_textoresposta}</td>
-							<td data-cell="curtidasresposta">{element.pos_curtidasrepostas}</td>
+							<td data-cell="curtidasresposta">{element.pos_curtidasresposta}</td>
 							<td data-cell="">
 								<button>Alterar</button>
 								<button>Excluir</button>
