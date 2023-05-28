@@ -6,11 +6,11 @@ import Tr from "../../components/Tr/index";
 
 export default function ConsultaMaterias() {
   const [data, setData] = useState([]);
-
   const [limit, setLimit] = useState(5);
   const [page, setPage] = useState(2);
   const [xTotalCount, setXTotalCount] = useState(-1);
   const [pages, setPages] = useState(-1);
+  
   useEffect(() => {
     let url = `/materias?_page=${page}&_limit=${limit}`;
 
@@ -29,7 +29,7 @@ export default function ConsultaMaterias() {
   return (
     <div>
       <table align="center" className="tabela">
-        <caption>Consulta de Cidades</caption>
+        <caption>Consulta de Matérias</caption>
         <thead>
           <th>Id</th>
           <th>Matérias</th>

@@ -12,7 +12,6 @@ export default function Main() {
       <p>
         <Link to="/posts"> Posts </Link>
       </p>
-      <Link> </Link>
     </>
   );
 }
