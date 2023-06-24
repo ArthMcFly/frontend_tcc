@@ -12,7 +12,7 @@ html {
 .tabela caption {
   text-transform: uppercase;
   height: 2rem;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .tabela th {
@@ -69,11 +69,11 @@ html {
   }
 
   .tabela tr td:nth-child(2)::before {
-    content: "cidade";
+    content: "nome";
   }
 
-  .tabela tr td:nth-child(1)::before {
-    content: "estado";
+  .tabela tr td:nth-child(3)::before {
+    content: "email";
   }
   .tabela tr td:nth-child(4)::before {
     grid-template-columns: auto auto;

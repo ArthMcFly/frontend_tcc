@@ -3,7 +3,7 @@ html {
 }
 
 .tabela {
-  min-width: 500px;
+  min-width: 300px;
   background: #323232;
   padding: 1rem;
   border-collapse: collapse;
@@ -69,11 +69,11 @@ html {
   }
 
   .tabela tr td:nth-child(2)::before {
-    content: "cidade";
+    content: "materias";
   }
 
-  .tabela tr td:nth-child(1)::before {
-    content: "estado";
+  .tabela tr td:nth-child(3)::before {
+    content: "cor";
   }
   .tabela tr td:nth-child(4)::before {
     grid-template-columns: auto auto;
