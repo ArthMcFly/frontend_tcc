@@ -2,7 +2,7 @@ import "./local.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { api } from "../../utils/api";
-import Tr from "../../components/Tr/index";
+import Tr from "../../components/TrUsu/index";
 
 export default function ConsultaUsuarios() {
 	const [data, setData] = useState([]);

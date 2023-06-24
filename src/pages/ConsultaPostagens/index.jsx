@@ -2,7 +2,7 @@ import "./local.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../../utils/api";
-import Tr from "../../components/Tr/index"; 
+import Tr from "../../components/TrPos/index"; 
 
 export default function ConsultaPostagens() {
 	const [data, setData] = useState([]);
@@ -43,7 +43,7 @@ export default function ConsultaPostagens() {
 				</thead>
 				{data.map((element, index) => {
 					return (
-						<tr>
+						<Tr data={element}>
 							<td data-cell="id">{element.id}</td>
 							<td data-cell="texto">{element.pos_texto}</td>
 							<td data-cell="imagem">{element.pos_imagem}</td>
@@ -55,7 +55,7 @@ export default function ConsultaPostagens() {
 								<button>Alterar</button>
 								<button>Excluir</button>
 							</td>
-						</tr>
+						</Tr>
 					);
 				})}
 			</table>
