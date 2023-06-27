@@ -26,6 +26,8 @@ export default function ConsultaMaterias() {
 		fetchData();
 	}, [limit, page]);
 
+
+
 	return (
 		<div>
 			<table align="center" className="tabela">
