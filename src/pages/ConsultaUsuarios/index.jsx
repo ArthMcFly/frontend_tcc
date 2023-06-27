@@ -34,11 +34,8 @@ export default function ConsultaUsuarios() {
 					<th>Id</th>
 					<th>Nome</th>
 					<th>Email</th>
-					<th>Senha</th>
 					<th>Arroba</th>
-					<th>Foto do Perfil</th>
 					<th>Cor do Perfil</th>
-					<th>Bio</th>
 					<th>Nível</th>
 					<th>Comandos</th>
 				</thead>
@@ -48,11 +45,8 @@ export default function ConsultaUsuarios() {
 							<td data-cell="id">{element.id}</td>
 							<td data-cell="nome">{element.usu_nome}</td>
 							<td data-cell="email">{element.usu_email}</td>
-							<td data-cell="senha">{element.usu_senha}</td>
 							<td data-cell="arroba">{element.usu_arroba}</td>
-							<td data-cell="foto Perfil">{element.usu_fotoperfil}</td>
 							<td data-cell="cor Perfil">{element.usu_corperfil}</td>
-							<td data-cell="bio">{element.usu_bio}</td>
 							<td data-cell="nivel">{element.usu_nivel}</td>
 							<td data-cell="">
 								<button>Alterar</button>
